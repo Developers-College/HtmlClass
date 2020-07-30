@@ -47,18 +47,60 @@
 </div>
 <span>Here we go</span>
 
-<form>
-<label>Firstname:</label><input type="text" name="txtFirstname" id="txtFirstname"   /><br />
-<label>Lastname:</label><input type="text" name="txtFirstname" id="txtFirstname"   /><br />
-<label>Firstname:</label><input type="text" name="txtFirstname" id="txtFirstname"   /><br />
+<form action="" method="POST" >
+<fieldset>
+    <legend>First section</legend>
+<label>Firstname:</label><input type="text" name="txtFirstname" id="txtFirstname" placeholder="enter your firstname"   /><br />
+<label>Lastname:</label><input type="text" name="txtLastname" id="txtFirstname" placeholder="zdfsdf"   /><br />
+<label>Firstname:</label><input type="text" name="txtFirstname" id="txtFirstname" placeholder="asfs"   /><br />
 <input type="radio" name="rdoidea" id="rdoidea"   /><br />
-<input type="button" value="Submit" id="btnSubmit"  />
+<label>Email:</label> <input type="email" id="email" required />
+</fieldset>
+<fieldset>
+    <legend>Personal details</legend>
+    <label for="name">Your name:</label>
+    <input type="text" name="name" id="name">
+    <label for="age">Your age:</label>
+    <input type="number" name="age" id="age">
+</fieldset>
 
+<select>
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="opel">Opel</option>
+    <option value="audi">Audi</option>
+  </select>
+  <br />
+  <select name="userChoice">
+    <optgroup  label="Front end development">
+      <option>HTML</option>
+      <option>CSS</option>
+      <option>JS</option>
+    </optgroup> 
+    <optgroup label="Back end development">
+      <option>Ruby on Rails</option>
+      <option selected>Django</option>
+    </optgroup>
+    <!-- try adding disabled attribute and see what happens -->
+    <optgroup label="Design">
+      <option>User interface</option>
+      <option>User experience</option>
+      <option>Color theory</option>
+    </optgroup>
+  </select>
+
+<input type="button" value="Submit" id="btnSubmit"  />
+<br> 
+<br />
 <iframe src="http://avsynctech.com/" width="700px" height="250px"></iframe>
 
 </form>
 
-
+<form method="POST" action="#">
+    <label>Email: </label> 
+    <input type="text" name="email" required>
+    <input type="submit">
+  </form>
 
     </body>
 </html>

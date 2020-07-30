@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <title>Assignment</title>
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .container>div {
+            flex: 1;
+            /*grow*/
+        }
+    </style>
+
+</head>
+
+<body>
+    <div style="border-width:2px;border-style: dotted; width:500px;">
+        <div id="leftdiv" style="float: left; border-width:1px;border-style: solid">
+            i am on the left</div>
+        <div style="float: right; border-width:1px;border-style: solid">i am on the righ</div>
+    </div>
+    <br>
+    <div style="border-width:2px;border-style: dotted; width:500px;">
+        <div style="float: left; padding: 5px 5px 5px 5px;">1st
+            columnxfgbxdfhsdfgnhdfhbdfgdfhbdfghadrfghsdfgsdfgsdgssdgsdgzdfhb</div>
+        <div style="float: left;padding: 5px 5px 5px 5px;">2nd column</div>
+        <div style="float: left;padding: 5px 5px 5px 5px;">3rd column</div>
+        <br style="clear: left;">
+    </div>
+
+    <div class="container">
+        <div>Left div</div>
+        <div>
+            <form id="formoid" action="" title="" method="post">
+                <div>
+                    <label class="title">First Name</label>
+                    <input type="text" id="first-name" name="first-name">
+                </div>
+                <div>
+                    <label class="title">Last Name</label>
+                    <input type="text" id="last-name" name="last-name">
+                </div>
+                <div>
+                    <label class="age">Age</label>
+                    <input type="text" id="age" name="age">
+                </div>
+                <div>
+                    <input type="submit" id="submitButton" name="submitButton" value="Submit">
+                </div>
+            </form>
+            <input type="button" name="change"
+                onclick="alert(document.getElementById('leftdiv').innerHTML='HELLO WORLD!');" value="Change Context"
+                width="45px" />
+            <br>
+
+            <input type="button" name="functonchange" onclick="display();" value="Change Function" width="45px" />
+            <br>
+            <input type="button" name="varTest" onclick="test_var_let(5.5,10.6);" value="Test Var" width="45px" />
+
+        </div>
+        <div>Right div</div>
+    </div>
+    <script>
+        function display() {
+            // alert(document.getElementById('leftdiv').innerHTML='HELLO WORLD!');
+            let a = 10;
+            let b = 20;
+            var sum = 0;
+
+            sum = a + b;
+
+            console.log(sum);
+            alert(sum);
+
+        }
+
+        function test_var_let(x,y) {
+           document.write(x-1, "\n");
+
+            // calling y after definition  
+             document.write(y+10, "\n");
+
+            // calling var z before definition will return undefined 
+            document.write(z, "\n");
+            var z = 2;
+
+            // calling let a before definition will give error 
+            document.write(a);
+            let a = 3;
+
+        }
+
+    </script>
+</body>
+
+</html>

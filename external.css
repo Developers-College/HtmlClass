@@ -1,0 +1,21 @@
+            h3{
+                color:green;
+                font-size: 20px ;
+                float:right;
+            }
+            p{
+                font-weight: bold;
+                background-color: hotpink;
+            }
+            #diff{
+                color: blue;
+                font-size: 12px;
+            }
+
+            .allblack{
+                    font-size: 15px;
+                    border-style:solid;
+                    border-color: #0efef0;
+                    border-width: 2px;                                      
+                    color: crimson;
+            }

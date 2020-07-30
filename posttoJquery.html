@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Post with jquery Example</title>
+    <link rel="stylesheet" type="text/css" href="external.css" />
+    <style>
+        h3 {
+            color: black;
+            font-size: 20px;
+            float: right;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <form id="formoid" action="http://127.0.0.1:8080/friend" title="" method="post">
+        <div>
+            <label class="title">First Name</label>
+            <input type="text" id="first-name" name="first-name">
+        </div>
+        <div>
+            <label class="title">Last Name</label>
+            <input type="text" id="last-name" name="last-name">
+        </div>
+        <div>
+            <label class="age">Age</label>
+            <input type="text" id="age" name="age">
+        </div>
+        <div>
+            <input type="submit" id="submitButton" name="submitButton" value="Submit">
+        </div>
+    </form>
+
+    <div id="result"></div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#formoid").submit(function (event) {
+                /* stop form from submitting normally */
+                event.preventDefault();
+
+                /* get the action attribute from the <form action=""> element */
+                var $form = $(this),
+                    url = $form.attr('action');
+
+                /* Send the data using post with element id name and name2*/
+                var posting = $.post(url, {
+                    first_name: $('#name').val(),
+                    last_name: $('#last-name').val(),
+                    age: $('#age').val()
+                });
+
+                /* Alerts the results */
+                posting.done(function (data) {
+                    $('#result').text('success');
+                });
+                posting.fail(function () {
+                    $('#result').text('failed');
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> My First Web Page </title>
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .container>div {
+            flex: 1;
+            /*grow*/
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div>
+            <div style="float: left;">
+                Left header
+            </div>
+            <div style="float: right;">
+                Right
+            </div>
+        </div>
+        <br>
+        <div>
+            <div style="float: left;width: 200px; border-style: double; border-width: 2px;">
+                below left
+            </div>
+            <div
+                style="margin:10px; width: 200px; border-style: double; border-width: 2px; padding: 5px 5px 5px 5px; ;">
+                Center
+            </div>
+            <div style="float: right;width: 200px;border-style: double; border-width: 2px;">
+                Below right
+            </div>
+        </div>
+        <!-- UnProfessional way  Use a float left and clear -->
+        <div class="container">
+        <div style="float: left; width: 200px;">Left Stuff</div>
+        <div style="float: left; width: 100px;">Middle Stuff</div>
+        <div style="float: left; width: 200px;">Right Stuff</div>
+        <br style="clear: left;" />
+
+        <!-- Professional way  Use a div with cSS in head -->
+        <div class="container">
+            <div>Left div</div>
+            <div>Middle div</div>
+            <div>Right div</div>
+        </div>
+
+    </div>
+</body>
+
+</html>
